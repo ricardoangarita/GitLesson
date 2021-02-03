@@ -1,15 +1,16 @@
 header {
-  display: flex;
-  flex-direction: row;
   nav {
+    .banner {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border: 1px solid red;
+    }
     .logo {
-      position: relative;
-      left: 3vw;
-      top: 3vh;
+      margin: 10px;
     }
     #check {
-      position: absolute;
-      right: 3vw;
       &:checked ~ ul {
         display: block;
       }
@@ -23,12 +24,8 @@ header {
         transform: rotate(-50deg);
       }
     }
-    width: 100vw;
-    position: relative;
     .menu-icon {
-      position: absolute;
-      right: 3vw;
-      top: 5vh;
+      margin: 15px;
       .menu {
         height: 10px;
         border-top: 3px solid #000;
@@ -42,6 +39,7 @@ header {
       margin-top: 1.5rem;
       text-align: center;
       display: none;
+      width: 100%;
       .menu-box {
         list-style: none;
         background: #000;

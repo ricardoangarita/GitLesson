@@ -6,7 +6,7 @@
   font-family: "Courier New", Courier, monospace;
 }
 
-header {
+header nav .banner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,22 +14,16 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-header nav {
-  width: 100vw;
-  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid red;
 }
 
 header nav .logo {
-  position: relative;
-  left: 3vw;
-  top: 3vh;
-}
-
-header nav #check {
-  position: absolute;
-  right: 3vw;
+  margin: 10px;
 }
 
 header nav #check:checked ~ ul {
@@ -51,9 +45,7 @@ header nav #check:checked ~ .menu-icon :nth-child(2) {
 }
 
 header nav .menu-icon {
-  position: absolute;
-  right: 3vw;
-  top: 5vh;
+  margin: 15px;
 }
 
 header nav .menu-icon .menu {
@@ -74,6 +66,7 @@ header nav ul {
   margin-top: 1.5rem;
   text-align: center;
   display: none;
+  width: 100%;
 }
 
 header nav ul .menu-box {
