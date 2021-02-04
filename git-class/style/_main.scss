@@ -5,10 +5,45 @@ main {
       margin-top: 4rem;
     }
     text-align: center;
+    h2 {
+      font-size: 1rem;
+      text-align: left;
+      padding-top: 1rem;
+      padding-left: 1.5rem;
+      font-weight: bold;
+      text-decoration: underline;
+      color: gold;
+      font-style: italic;
+    }
     margin-top: 2rem;
     p {
       padding: 1.5rem;
       text-align: justify;
+      color: #fff;
+      a {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .news {
+      h2 {
+        width: 50vw;
+      }
+      p {
+        width: 50vw;
+      }
+      &:nth-child(2) {
+        margin-top: 4rem;
+      }
     }
   }
 }

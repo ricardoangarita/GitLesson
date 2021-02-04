@@ -1,17 +1,19 @@
 header {
+  background-color: #000;
+  box-shadow: 5px 10px 18px #eee;
   nav {
     .banner {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      border: 1px solid red;
     }
     .logo {
       margin: 10px;
     }
     #check {
-      &:checked ~ ul {
+      opacity: 0;
+      &:checked ~ .menu-container {
         display: block;
       }
       &:checked ~ .menu-icon :nth-child(3) {
@@ -28,27 +30,45 @@ header {
       margin: 15px;
       .menu {
         height: 10px;
-        border-top: 3px solid #000;
+        border-top: 3px solid #fff;
         display: flex;
         flex-direction: column;
         width: 30px;
         cursor: pointer;
       }
     }
-    ul {
+    .menu-container {
       margin-top: 1.5rem;
       text-align: center;
       display: none;
       width: 100%;
       .menu-box {
         list-style: none;
-        background: #000;
+        background: #141e30;
         padding: 5px;
         margin: 3px;
         .menu-item {
           color: white;
           text-decoration: none;
         }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    nav {
+      #check {
+        &:checked ~ .menu-container {
+          @include HideHamburguerMenu;
+        }
+      }
+      .menu-container {
+        @include HideHamburguerMenu;
+      }
+      .menu-icon {
+        display: none;
       }
     }
   }
